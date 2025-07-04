@@ -1,7 +1,7 @@
 -- Задание 2
 --2.1
 select name, duration from track
-where duration  = (select MAX(duration ) from track);
+where duration  = (select MAX(duration) from track);
 --2.2
 select name from track 
 where duration >= 210;
@@ -49,3 +49,6 @@ join artist_album aa on a.id = aa.album_id
 join artist ar on aa.artist_id = ar.id
 where ar.name = 'Lui Armstrong'
 order by c.name;
+
+
+
