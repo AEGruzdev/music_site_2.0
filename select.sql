@@ -13,7 +13,8 @@ select name from artist
 where name not like '% %';
 --2.5
 select name from track
-where name like '%my%' or name like '%мой%';
+where name like '% my' or name like '% my %' or name like 'my %' or name = 'my' or name like '% мой' or name like '% мой %' or name like 'мой %' or name = 'мой';
+
 
 -- Задание 3
 --3.1
