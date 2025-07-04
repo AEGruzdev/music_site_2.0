@@ -15,7 +15,6 @@ where name not like '% %';
 select name from track
 where name like '% my' or name like '% my %' or name like 'my %' or name = 'my' or name like '% мой' or name like '% мой %' or name like 'мой %' or name = 'мой';
 
-
 -- Задание 3
 --3.1
 select g.name, count(*) from artist_genre ag
@@ -24,8 +23,7 @@ group by genre_id, g.name
 order by genre_id;
 --3.2
 select count(*) from track t
-join artist_album aa on t.album_id = aa.album_id
-join album a on aa.album_id = a.id
+join album a on t.album_id = a.id
 where a.year_of_release >= '2019-01-01' and a.year_of_release < '2021-01-01';
 --3.3
 select a.id, a.name, avg(duration) from track t
